@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+/* Police et couleurs */
+* {
+    font-family: Roboto, Arial, sans-serif !important;
+}
+
+h1, h2 {
+    color: #0a3a56;
+    font-family: Roboto Condensed, Roboto, Arial, sans-serif !important;
+}
+
+h3, h4, h5, h6 {
+    color: #3d617d;
+}
+
+h3 {
+    margin-top: 1rem;
+}
+
+/* Section résumé */
+#main-page > header {
+    background-color: #0a3a56;
+    padding: 1.5rem;
+}
+
+#main-page > header, #main-page > header * {
+    color: #fff;
+}
+
+/* Section principale */
+#main-page > main {
+    padding: 0;
+}
+
+/* Navigation */
+#main-page > main > nav {
+    background-color: #3d617d;
+}
+
+#main-page > main > nav a {
+    background-color: #3d617d;
+    color: #fff;
+    display: block;
+    padding: 1rem;
+
+    transition: background-color 0.2s;
+}
+
+#main-page > main > nav a:hover {
+    background-color: #0a3a56;
+}
+
+#pages > .page {
+    padding: 1.5rem;
+    max-height: 100%;
+    overflow-y: auto;
+    display: none;
+}
+
+/* Styles PC */
+@media print, screen and (min-width: 64em) {
+    body {
+        overflow: hidden;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    #main-page {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    #main-page > header {
+        padding: 4rem 2.5rem;
+        overflow-y: auto;
+    }
+
+    #main-page > main > nav {
+        height: 56px;
+    }
+
+    #pages {
+        height: calc(100% - 56px);
+    }
+}
+
+progress {
+    vertical-align: -3px;
+}
+
+p {
+    word-wrap: break-word;
+}
+
+textarea {
+    resize: vertical;
+}
+
+progress {
+    height: 26px;
+}
+
+progress::after {
+    content: "              " attr(value) "%";
+}
